@@ -1,0 +1,116 @@
+{
+	"parser": "babel-eslint",
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended"
+		//"prettier",
+		//"prettier/react",
+		//"prettier/babel"
+	],
+	"plugins": [
+		"react",
+		"react-hooks"
+	],
+	"env": {
+		"browser": true,
+		"node": true,
+		"jest": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 6,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"no-multi-spaces": "error",
+		"space-in-parens": 2,
+		//"object-curly-spacing": 2,
+		"object-curly-spacing": [
+			"error",
+			"never"
+		],
+		"no-mixed-spaces-and-tabs": "error",
+		//"no-mixed-spaces-and-tabs": [
+		//	"error",
+		//	"smart-tabs"
+		//],
+		"no-unreachable": 1,
+		"brace-style": [
+			"error",
+			//"1tbs",
+			//"allman",
+			"stroustrup",
+			{
+				"allowSingleLine": true
+			}
+		],
+		"no-multiple-empty-lines": [
+			"error",
+			{
+				"max": 1,
+				"maxEOF": 0
+			}
+		],
+		"indent": [
+			2,
+			4,
+			{
+				"SwitchCase": 1
+			}
+		],
+		"comma-dangle": [
+			"error",
+			"never"
+		],
+		"semi": [
+			"error",
+			"always"
+		],
+		"no-unused-vars": 1,
+		"no-debugger": 2,
+		//"semi-style": [
+		//	"error",
+		//	"last"
+		//],
+		"react/no-danger": "off",
+		"react/boolean-prop-naming": [
+			"error",
+			{
+				"rule": "^(is|are|has|should)[A-Z]([A-Za-z0-9]?)+",
+				"message": "Boolean props must begin with: is, are, has, or should"
+			}
+		],
+		"react/forbid-component-props": [
+			"error",
+			{
+				"forbid": [
+					{
+						"propName": "cssClass",
+						"allowedFor": [
+							"Header"
+						]
+					}
+				]
+			}
+		],
+		"react/jsx-handler-names": [
+			"error"
+		]
+		//"no-unused-vars": [
+		//	"error",
+		//	{
+		//		"varsIgnorePattern": "[iI]gnored",
+		//		"argsIgnorePattern": "^_"
+		//	}
+		//]
+	},
+	"settings": {
+		"react": {
+			"version": "detect",
+			"pragma": "React"
+		}
+	}
+}

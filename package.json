@@ -1,0 +1,16 @@
+{
+	"name": "js-utilities",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "rik <rcousens@colt.com> (http://www.colt.com/)",
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"babel-eslint": "^10.1.0",
+		"eslint": "^7.18.0",
+		"eslint-cli": "^1.1.1",
+		"eslint-plugin-react": "^7.22.0",
+		"eslint-plugin-react-hooks": "^4.2.0",
+		"yargs": "^16.2.0"
+	}
+}
