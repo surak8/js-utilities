@@ -4,7 +4,6 @@
 	"main": "index.js",
 	"author": "rik <rcousens@colt.com> (http://www.colt.com/)",
 	"license": "MIT",
-	"dependencies": {},
 	"devDependencies": {
 		"babel-eslint": "^10.1.0",
 		"ejs": "^3.1.5",
@@ -20,6 +19,6 @@
 		"deps:test": "node readDeps.js -i tmp.tmp",
 		"deps:real": "node readDeps.js -i package.json",
 		"generate": "node create-colt-project-from-template.js",
-		"clean": "rd /q/s src&&del webpack.config.js"
+		"clean": "rd /q/s src && rd /q/s colt && rd /q/s starter &&del webpack.config.js"
 	}
 }
