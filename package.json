@@ -7,10 +7,19 @@
 	"dependencies": {},
 	"devDependencies": {
 		"babel-eslint": "^10.1.0",
+		"ejs": "^3.1.5",
 		"eslint": "^7.18.0",
 		"eslint-cli": "^1.1.1",
 		"eslint-plugin-react": "^7.22.0",
 		"eslint-plugin-react-hooks": "^4.2.0",
+		"fs-extra": "^9.1.0",
 		"yargs": "^16.2.0"
+	},
+	"scripts": {
+		"riktest": "node riktest.js",
+		"deps:test": "node readDeps.js -i tmp.tmp",
+		"deps:real": "node readDeps.js -i package.json",
+		"generate": "node create-colt-project-from-template.js",
+		"clean": "rd /q/s src&&del webpack.config.js"
 	}
 }

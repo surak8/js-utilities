@@ -25,6 +25,10 @@
 		}
 	},
 	"rules": {
+		"quotes": [
+			"error",
+			"single"
+		],
 		"no-multi-spaces": "error",
 		"space-in-parens": 2,
 		//"object-curly-spacing": 2,

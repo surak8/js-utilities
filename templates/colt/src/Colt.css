@@ -1,0 +1,86 @@
+/* generated <%=generationDate%> */
+body {
+	background-color: linen;
+}
+
+h1 {
+	color      : maroon;
+	margin-left: 40px;
+}
+
+div {
+	background-color: steelblue;
+}
+
+cssHeader {
+	background-color: pink;
+}
+
+cssNavbar {
+	background-color: fuchsia;
+}
+
+cssPageBody {
+	background-color: lavender;
+}
+
+cssFooter {
+	background-color: aquamarine;
+}
+
+/************************************************/
+.container {
+	display        : flex;
+	justify-content: flex-start;
+	align-items    : center;
+}
+
+.label {
+	font-weight : 700;
+	margin-right: 10px;
+}
+
+.hide-show-button {
+	cursor       : pointer;
+	margin       : 0 5px;
+	text-align   : center;
+	font-size    : 14px;
+	width        : 100px;
+	padding      : 4px;
+	border-radius: 3px;
+	border       : 1px solid #333333;
+	transition   : all 0.2s ease-in-out;
+}
+
+.hide-show-button {
+	background-color: #f56342;
+	color           : white;
+}
+
+.hide-show-button:hover {
+	background-color: #be391c;
+}
+
+.clicks {
+	cursor       : pointer;
+	font-size    : 14px;
+	width        : 100px;
+	padding      : 4px;
+	border-radius: 3px;
+	border       : 1px solid #333333;
+	text-align   : center;
+	transition   : all 0.2s ease-in-out;
+}
+
+.clicks:hover {
+	background-color: #c1c1c1;
+}
+
+.clicks:focus,
+.hide-show-button:focus {
+	outline: 0;
+}
+
+.hide-me {
+	display: none
+}

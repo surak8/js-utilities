@@ -5,6 +5,30 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"name": "generate",
+			"program": "${workspaceFolder}/create-colt-project-from-template.js",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"type": "pwa-node",
+			"args": [
+				"-v",
+				//"-h"
+			],
+			"env": {
+				"v1": "V1",
+				"v2": "V2"
+			}
+		},
+		{
+			"name": "Launch Edge",
+			"request": "launch",
+			"type": "pwa-msedge",
+			"url": "http://localhost:8080",
+			"webRoot": "${workspaceFolder}"
+		},
+		{
 			"name": "node-riktest",
 			"program": "${workspaceFolder}/riktest.js",
 			"request": "launch",
