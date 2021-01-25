@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 const glob = require('glob');
+const ejs = require('ejs');
 
 /**
  * blah
@@ -50,9 +51,10 @@ class ColtTemplateGenerator {
                     console.log(`Generating template [from ${this.templateDir}]...`);
                 else
                     console.log('Generating template...');
-                if (!this.skipGeneration)
-                    this.processTemplates(this.templateDir);
-                else
+                if (!this.skipGeneration) {
+                    5;
+                    this.processTemplates(this.templatePath);
+                }else
                     console.log('skipping file-generation.');
             }catch (errMsg) {
                 console.error(errMsg);
@@ -88,6 +90,38 @@ class ColtTemplateGenerator {
             if (anEntry && fs.statSync(anEntry).isFile())
                 return true;
             return false;
+        }
+        processTemplateFile(aFile, scriptPath, extMap, data) {
+            var tmp, outputFile, currentExt, options;
+            var extChanged = false;
+
+            tmp = path.relative(scriptPath, aFile);
+            currentExt = path.extname(aFile);
+            if (extMap[currentExt]) {
+                tmp = path.join(path.dirname(tmp), path.basename(tmp, currentExt) + extMap[currentExt]);
+                // eslint-disable-next-line no-unused-vars
+                extChanged = true;
+            }
+            outputFile = path.resolve(process.cwd(), tmp);
+            // data.pu
+            // data = { ...data, ...{ isData: true } };
+            options = {...options, ...{isOptions: true}};
+
+            ejs.renderFile(aFile, data, options, function (err, str) {
+                // str => Rendered HTML string
+                if (err)
+                    console.error(`Error creating ${outputFile}:\r\n${err}`);
+                else
+                    try {
+                        fs.ensureFileSync(outputFile);
+                        fs.outputFileSync(outputFile, str);
+                        console.log(`read ${aFile}\r\nwrote ${outputFile}.`);
+                    }catch (anError) {
+                        console.error('here');
+                    }
+
+            });
+            console.log(`read:\r\n\t${aFile}\r\nwrite:\r\n\t${outputFile}\r\n`);
         }
 }
 module.exports = {

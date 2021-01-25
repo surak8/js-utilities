@@ -8,7 +8,7 @@
 			"console": "integratedTerminal",
 			"internalConsoleOptions": "neverOpen",
 			"name": "nm-generate",
-			"program": "${workspaceFolder}/create-colt-project-from-template.js",
+			"program": "${workspaceFolder}/src/create-colt-project-from-template.js",
 			"request": "launch",
 			"restart": true,
 			"runtimeExecutable": "nodemon",
@@ -26,7 +26,7 @@
 		},
 		{
 			"name": "generate",
-			"program": "${workspaceFolder}/create-colt-project-from-template.js",
+			"program": "${workspaceFolder}/src/create-colt-project-from-template.js",
 			"request": "launch",
 			"skipFiles": [
 				"<node_internals>/**"
@@ -49,7 +49,7 @@
 		},
 		{
 			"name": "node-riktest",
-			"program": "${workspaceFolder}/riktest.js",
+			"program": "${workspaceFolder}/src/riktest.js",
 			"request": "launch",
 			"skipFiles": [
 				"<node_internals>/**"
@@ -58,7 +58,7 @@
 		},
 		{
 			"name": "node-deps",
-			"program": "${workspaceFolder}/readDeps.js",
+			"program": "${workspaceFolder}/src.readDeps.js",
 			"request": "launch",
 			"skipFiles": [
 				"<node_internals>/**"

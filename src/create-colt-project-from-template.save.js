@@ -21,6 +21,7 @@ const logVector = (v) => {
     }
 };
 /** main-line function */
+// eslint-disable-next-line no-unused-vars
 const main = () => {
     var yargs,yargObj;
     try {
@@ -54,18 +55,18 @@ const main = () => {
             .help('h');
         yargObj = yargs.argv;
         const {destination,kind,skip,templateDir,verbose} = yargObj;
-        //let templatePath = path.resolve(templateDir,kind);
+        // let templatePath = path.resolve(templateDir,kind);
         if (verbose) {
             console.log(
                 `\tdestination=${destination}\r\n` +
 `\tkind=${kind}\r\n` +
 `\ttemplateDir=${templateDir}\r\n` +
 `\tverbose=${verbose}`);
-            //console.log(`SRC=${yargObj.templateDir}\r\n` +
+            // console.log(`SRC=${yargObj.templateDir}\r\n` +
             //	`DEST=${yargObj.destination}`);
         }
 
-        //if (!fs.existsSync((templateDir = yargObj.templateDir))) {
+        // if (!fs.existsSync((templateDir = yargObj.templateDir))) {
         if (!fs.existsSync(templateDir)) {
             console.error(`template-dir '${path.relative(process.cwd(),templateDir)}' does not exist!`);
             process.exit(1);
@@ -79,12 +80,12 @@ const main = () => {
         else
             console.log('skipping file-generation.');
 
-        /*********************************
+        /** *******************************
 * processTemplates(scriptPath);
 */
         // eslint-disable-next-line no-unused-vars
-        //const {_: leftovers, verbose, v, t, template_dir} = argv;
-        //const {_: leftovers, verbose, v, t, template_dir} = yargs;
+        // const {_: leftovers, verbose, v, t, template_dir} = argv;
+        // const {_: leftovers, verbose, v, t, template_dir} = yargs;
         // const data = {
         //	leftovers,
         //	...{scriptPath: scriptPath}

@@ -15,10 +15,10 @@
 		"yargs": "^16.2.0"
 	},
 	"scripts": {
-		"riktest": "node riktest.js",
-		"deps:test": "node readDeps.js -i tmp.tmp",
-		"deps:real": "node readDeps.js -i package.json",
-		"generate": "node create-colt-project-from-template.js",
-		"clean": "rd /q/s src && rd /q/s colt && rd /q/s starter &&del webpack.config.js"
+		"riktest": "node src/riktest.js",
+		"deps:test": "node src/readDeps.js -i tmp.tmp",
+		"deps:real": "node src/readDeps.js -i package.json",
+		"generate": "node src/create-colt-project-from-template.js",
+		"clean": "del /q/s src\\Colt.css src\\index.html src\\index.js webpack.config.js"
 	}
 }
