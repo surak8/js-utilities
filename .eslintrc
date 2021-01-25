@@ -25,12 +25,68 @@
 		}
 	},
 	"rules": {
+		"spaced-comment": [
+			"error",
+			"always"
+		],
+		//	"spaced-comment": [
+		//	"error",
+		//	"always",
+		//	{
+		//		"line": {
+		//			"markers": [
+		//				"/"
+		//			],
+		//			"exceptions": [
+		//				"-",
+		//				"+"
+		//			]
+		//		},
+		//		"block": {
+		//			"markers": [
+		//				"!"
+		//			],
+		//			"exceptions": [
+		//				"*"
+		//			]
+		//		}
+		//	}
+		//],
+		"keyword-spacing": [
+			"error",
+			{
+				"before": false,
+				"after": true
+			}
+		],
+		//"no-regex-spaces": "error",
 		"quotes": [
 			"error",
 			"single"
 		],
 		"no-multi-spaces": "error",
-		"space-in-parens": 2,
+		"space-in-parens": [
+			"error",
+			"never"
+		],
+		"space-infix-ops": [
+			"error",
+			{
+				"int32Hint": false
+			}
+		],
+		//"space-before-blocks": [
+		//	"error",
+		//	"always"
+		//],
+		"space-before-blocks": [
+			"error",
+			{
+				"functions": "always",
+				"keywords": "always",
+				"classes": "always"
+			}
+		],
 		//"object-curly-spacing": 2,
 		"object-curly-spacing": [
 			"error",
@@ -44,9 +100,9 @@
 		"no-unreachable": 1,
 		"brace-style": [
 			"error",
-			//"1tbs",
+			"1tbs",
 			//"allman",
-			"stroustrup",
+			//"stroustrup",
 			{
 				"allowSingleLine": true
 			}

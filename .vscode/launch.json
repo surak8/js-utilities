@@ -5,6 +5,26 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"console": "integratedTerminal",
+			"internalConsoleOptions": "neverOpen",
+			"name": "nm-generate",
+			"program": "${workspaceFolder}/create-colt-project-from-template.js",
+			"request": "launch",
+			"restart": true,
+			"runtimeExecutable": "nodemon",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"type": "pwa-node",
+			"args": [
+				"-sv",
+			],
+			"env": {
+				"v1": "V1",
+				"v2": "V2"
+			}
+		},
+		{
 			"name": "generate",
 			"program": "${workspaceFolder}/create-colt-project-from-template.js",
 			"request": "launch",
@@ -14,7 +34,6 @@
 			"type": "pwa-node",
 			"args": [
 				"-v",
-				//"-h"
 			],
 			"env": {
 				"v1": "V1",
