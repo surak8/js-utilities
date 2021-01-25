@@ -113,7 +113,7 @@ class ColtTemplateGenerator {
                     console.error(`Error creating ${outputFile}:\r\n${err}`);
                 else
                     try {
-                        fs.ensureFileSync(outputFile);
+                        // fs.ensureFileSync(outputFile);
                         fs.outputFileSync(outputFile, str);
                         console.log(`read ${aFile}\r\nwrote ${outputFile}.`);
                     }catch (anError) {

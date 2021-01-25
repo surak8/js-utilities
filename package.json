@@ -5,13 +5,23 @@
 	"author": "rik <rcousens@colt.com> (http://www.colt.com/)",
 	"license": "MIT",
 	"devDependencies": {
+		"@babel/preset-env": "^7.12.11",
+		"@babel/preset-react": "^7.12.10",
 		"babel-eslint": "^10.1.0",
+		"babel-loader": "^8.2.2",
+		"css-loader": "^5.0.1",
 		"ejs": "^3.1.5",
 		"eslint": "^7.18.0",
 		"eslint-cli": "^1.1.1",
 		"eslint-plugin-react": "^7.22.0",
 		"eslint-plugin-react-hooks": "^4.2.0",
 		"fs-extra": "^9.1.0",
+		"html-webpack-plugin": "^4.5.1",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"style-loader": "^2.0.0",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.2",
 		"yargs": "^16.2.0"
 	},
 	"scripts": {
@@ -19,6 +29,11 @@
 		"deps:test": "node src/readDeps.js -i tmp.tmp",
 		"deps:real": "node src/readDeps.js -i package.json",
 		"generate": "node src/create-colt-project-from-template.js",
-		"clean": "del /q/s src\\Colt.css src\\index.html src\\index.js webpack.config.js"
+		"clean": "del /q/s src\\Colt.css src\\index.html src\\index.js webpack.config.js",
+		"start": "webpack server --open",
+		"start-help": "webpack --help=verbose",
+		"start2": "webpack-dev-server server --open",
+		"start3": "webpack-dev-server src/server --open",
+		"start4": "webpack-dev-server --open"
 	}
 }

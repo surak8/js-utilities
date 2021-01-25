@@ -1,7 +1,11 @@
 node_modules
-#webpack.config.js
 tmp.tmp
 out
 docheckout.bat
-#weba
 cleanup.bat
+
+
+src/Colt.css
+src/index.html
+src/index.js
+webpack.config.js
